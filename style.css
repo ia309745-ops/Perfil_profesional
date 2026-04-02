@@ -135,16 +135,64 @@ body {
   pointer-events: none;
 }
 
-/* Subtle grid lines */
-.hero::after {
+/* ============================================ DYNAMIC MAP BACKGROUND */
+.map-bg-fixed {
+  position: fixed; inset: 0; top: 0; left: 0; z-index: -1;
+  overflow: hidden; pointer-events: none;
+}
+
+/* Retícula (Grid lines) expandida a toda la pantalla */
+.map-bg-fixed::after {
   content: '';
   position: absolute; inset: 0;
   background-image:
     linear-gradient(var(--border) 1px, transparent 1px),
     linear-gradient(90deg, var(--border) 1px, transparent 1px);
   background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 20%, transparent 100%);
   pointer-events: none;
+  z-index: 0;
+}
+
+/* Estilos de las líneas SVG */
+.map-route-svg {
+  width: 100%; height: 100%;
+  position: absolute; inset: 0; z-index: 1;
+  opacity: 0.40; /* Ligeramente más visible el brillo */
+  transition: opacity var(--transition);
+}
+
+[data-theme="light"] .map-route-svg {
+  opacity: 0.15;
+}
+
+.route-phantom {
+  stroke: var(--fg-muted);
+  stroke-width: 0.2;
+  stroke-dasharray: 2 4;
+  animation: move-phantom 40s linear infinite;
+}
+
+.route-path {
+  stroke: var(--accent);
+  stroke-width: 0.6;
+  filter: drop-shadow(0 0 5px var(--accent));
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  /* Un solo trazo simulando datos moviéndose a través del mapa */
+  stroke-dasharray: 25 350; 
+  animation: move-route 12s linear infinite;
+}
+
+@keyframes move-phantom {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -100; }
+}
+
+@keyframes move-route {
+  /* Al viajar en offset positivo, la línea corre hacia adelante en la ruta */
+  from { stroke-dashoffset: 375; }
+  to { stroke-dashoffset: 0; }
 }
 
 .hero-grid {
@@ -333,7 +381,7 @@ body {
 .xp-line { width: 1px; height: 2rem; background: var(--border); margin: 0.4rem 0 0.4rem 4px; }
 
 /* ============================================ SKILLS */
-.skills-section { background: var(--bg); }
+.skills-section { background: transparent; }
 
 .skills-layout {
   display: grid; grid-template-columns: 400px 1fr; gap: 5rem; align-items: center;
@@ -489,7 +537,7 @@ body {
 .add-card p { font-family: var(--font-mono); font-size: 0.75rem; }
 
 /* ============================================ CONTACT */
-.contact-section { background: var(--bg); }
+.contact-section { background: transparent; }
 
 .contact-sub {
   color: var(--fg-muted); max-width: 500px;

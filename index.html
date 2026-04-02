@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="es" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ismael Luna — Urbanista & GeoIA</title>
   <meta property="og:title" content="Ismael Luna — Urbanista & GIS Developer" />
-  <meta property="og:description" content="Urbanista con especialidad en geointeligencia y planificación territorial. Cruzo el análisis espacial con el código." />
+  <meta property="og:description"
+    content="Urbanista con especialidad en geointeligencia y planificación territorial. Cruzo el análisis espacial con el código." />
   <meta property="og:image" content="perfil.png" />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22serif%22 font-weight=%22bold%22 fill=%22%2300c9b1%22>IL</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22serif%22 font-weight=%22bold%22 fill=%22%2300c9b1%22>IL</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- DYNAMIC BACKGROUND -->
+  <div class="map-bg-fixed" id="mapBgFixed">
+    <svg class="map-route-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+      <!-- Vías complementarias fantasma -->
+      <path class="route-phantom" fill="none" d="M -20,10 L 40,10 L 40,30 L 80,30 L 80,70 L 120,70" />
+      <path class="route-phantom" fill="none" d="M 20,-20 L 20,50 L 90,50 L 90,120" />
+      <!-- Ruta Principal Animada -->
+      <path id="routePath" class="route-path" fill="none" d="M 10,-50 C 40,0 95,35 60,50 C 25,65 80,100 50,150" />
+    </svg>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
@@ -85,8 +102,11 @@
       <div class="about-grid">
         <div class="about-text">
           <h2 class="section-title">Territorio<br /><em>+ Código</em></h2>
-          <p>Urbanista con especialidad en geointeligencia y planificación territorial, con visión estratégica para fortalecer los procesos de ordenamiento, planeación y gobernanza territorial mediante el uso de información espacial y soluciones tecnológicas orientadas a la toma de decisiones.</p>
-          <p>Actualmente colaboro como Analista SIG en Encaje Taller Urbano e Investigador-Cartógrafo en el Instituto de Investigaciones Económicas de la UNAM, donde contribuyo a un atlas nacional de la industria automotriz.</p>
+          <p>Urbanista con especialidad en geointeligencia y planificación territorial, con visión estratégica para
+            fortalecer los procesos de ordenamiento, planeación y gobernanza territorial mediante el uso de información
+            espacial y soluciones tecnológicas orientadas a la toma de decisiones.</p>
+          <p>Actualmente colaboro como Analista SIG en Encaje Taller Urbano e Investigador-Cartógrafo en el Instituto de
+            Investigaciones Económicas de la UNAM, donde contribuyo a un atlas nacional de la industria automotriz.</p>
           <div class="cert-chips">
             <span class="chip">INEGI · Mapeo</span>
             <span class="chip">SEDATU · Estudios Metropolitanos</span>
@@ -147,22 +167,30 @@
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <span>QGIS</span>
-                <div class="bar"><div class="bar-fill" style="--w:95%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:95%"></div>
+                </div>
                 <span class="mono level">95</span>
               </div>
               <div class="skill-bar-item">
                 <span>ArcGIS</span>
-                <div class="bar"><div class="bar-fill" style="--w:75%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:75%"></div>
+                </div>
                 <span class="mono level">75</span>
               </div>
               <div class="skill-bar-item">
                 <span>GeoDa</span>
-                <div class="bar"><div class="bar-fill" style="--w:70%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:70%"></div>
+                </div>
                 <span class="mono level">70</span>
               </div>
               <div class="skill-bar-item">
                 <span>Agisoft Metashape</span>
-                <div class="bar"><div class="bar-fill" style="--w:90%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:90%"></div>
+                </div>
                 <span class="mono level">90</span>
               </div>
             </div>
@@ -172,17 +200,23 @@
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <span>HTML5</span>
-                <div class="bar"><div class="bar-fill" style="--w:90%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:90%"></div>
+                </div>
                 <span class="mono level">90</span>
               </div>
               <div class="skill-bar-item">
                 <span>CSS3</span>
-                <div class="bar"><div class="bar-fill" style="--w:92%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:92%"></div>
+                </div>
                 <span class="mono level">92</span>
               </div>
               <div class="skill-bar-item">
                 <span>JavaScript</span>
-                <div class="bar"><div class="bar-fill" style="--w:85%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:85%"></div>
+                </div>
                 <span class="mono level">85</span>
               </div>
             </div>
@@ -192,17 +226,23 @@
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <span>ProCreate</span>
-                <div class="bar"><div class="bar-fill" style="--w:90%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:90%"></div>
+                </div>
                 <span class="mono level">90</span>
               </div>
               <div class="skill-bar-item">
                 <span>Composite Editor</span>
-                <div class="bar"><div class="bar-fill" style="--w:88%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:88%"></div>
+                </div>
                 <span class="mono level">88</span>
               </div>
               <div class="skill-bar-item">
                 <span>Word / Excel</span>
-                <div class="bar"><div class="bar-fill" style="--w:95%"></div></div>
+                <div class="bar">
+                  <div class="bar-fill" style="--w:95%"></div>
+                </div>
                 <span class="mono level">95</span>
               </div>
             </div>
@@ -237,8 +277,10 @@
               <span class="tag">Mérida</span>
             </div>
             <h3>GeoEspacio — Mérida</h3>
-            <p>Diagnóstico y análisis territorial de espacios públicos en Mérida, Yucatán. Cartografía interactiva con datos normativos y propuestas de intervención urbana.</p>
-            <a href="https://ia309745-ops.github.io/GeoEspacio-Merida/" target="_blank" class="btn-card">Ver proyecto →</a>
+            <p>Diagnóstico y análisis territorial de espacios públicos en Mérida, Yucatán. Cartografía interactiva con
+              datos normativos y propuestas de intervención urbana.</p>
+            <a href="https://ia309745-ops.github.io/GeoEspacio-Merida/" target="_blank" class="btn-card">Ver proyecto
+              →</a>
           </div>
         </div>
 
@@ -259,8 +301,10 @@
               <span class="tag">Ordenamiento</span>
             </div>
             <h3>Normativa Champotón — Campeche</h3>
-            <p>Integración de normativa territorial y análisis de uso de suelo para el municipio de Champotón, Campeche. Encaje Taller Urbano.</p>
-            <a href="https://ia309745-ops.github.io/normativa-cham-cam/" target="_blank" class="btn-card">Ver proyecto →</a>
+            <p>Integración de normativa territorial y análisis de uso de suelo para el municipio de Champotón, Campeche.
+              Encaje Taller Urbano.</p>
+            <a href="https://ia309745-ops.github.io/normativa-cham-cam/" target="_blank" class="btn-card">Ver proyecto
+              →</a>
           </div>
         </div>
 
@@ -281,7 +325,8 @@
               <span class="tag">UNAM</span>
             </div>
             <h3>Atlas Armadoras Automotrices — UNAM</h3>
-            <p>Mapeo de unidades económicas de la industria automotriz en México. Proyecto DGAPA-PAPIIT, Instituto de Investigaciones Económicas, UNAM.</p>
+            <p>Mapeo de unidades económicas de la industria automotriz en México. Proyecto DGAPA-PAPIIT, Instituto de
+              Investigaciones Económicas, UNAM.</p>
             <a href="https://manuelemilian0.github.io/iiec/" target="_blank" class="btn-card">Ver proyecto →</a>
           </div>
         </div>
@@ -303,7 +348,8 @@
               <span class="tag">Territorial</span>
             </div>
             <h3>Proyecto Chenk</h3>
-            <p>Análisis territorial y representación cartográfica interactiva. Desarrollo de geovisualizador con datos espaciales y temáticos.</p>
+            <p>Análisis territorial y representación cartográfica interactiva. Desarrollo de geovisualizador con datos
+              espaciales y temáticos.</p>
             <a href="https://ia309745-ops.github.io/Chenk-/" target="_blank" class="btn-card">Ver proyecto →</a>
           </div>
         </div>
@@ -325,8 +371,10 @@
               <span class="tag">Rutas</span>
             </div>
             <h3>Sistema Logístico</h3>
-            <p>Plataforma de optimización logística y análisis de rutas espaciales. Dashboard interactivo con visualización de redes de distribución y análisis territorial de última milla.</p>
-            <a href="https://ia309745-ops.github.io/Sistema_log-stico/" target="_blank" class="btn-card">Ver proyecto →</a>
+            <p>Plataforma de optimización logística y análisis de rutas espaciales. Dashboard interactivo con
+              visualización de redes de distribución y análisis territorial de última milla.</p>
+            <a href="https://ia309745-ops.github.io/Sistema_log-stico/" target="_blank" class="btn-card">Ver proyecto
+              →</a>
           </div>
         </div>
 
@@ -339,7 +387,8 @@
     <div class="container">
       <div class="section-label mono">// 04 — Contacto</div>
       <h2 class="section-title">Hablemos<br /><em>de tu proyecto</em></h2>
-      <p class="contact-sub">Disponible para proyectos de análisis territorial, cartografía, diseño urbano y desarrollo de geovisualizadores.</p>
+      <p class="contact-sub">Disponible para proyectos de análisis territorial, cartografía, diseño urbano y desarrollo
+        de geovisualizadores.</p>
       <div class="contact-links">
         <a href="mailto:ia309745@gmail.com" class="contact-link">
           <span class="mono">✉</span> ia309745@gmail.com
@@ -362,4 +411,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

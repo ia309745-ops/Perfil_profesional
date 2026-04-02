@@ -207,6 +207,7 @@ if (radarCanvas) {
   }, { threshold: 0.1 }).observe(radarCanvas);
 }
 
+
 // ─── INIT ──────────────────────────────────────
 window.addEventListener('load', () => {
   document.querySelector('.hero-text')?.classList.add('visible');
