@@ -24,10 +24,8 @@
   <!-- DYNAMIC BACKGROUND -->
   <div class="map-bg-fixed" id="mapBgFixed">
     <svg class="map-route-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-      <!-- Vías complementarias fantasma -->
       <path class="route-phantom" fill="none" d="M -20,10 L 40,10 L 40,30 L 80,30 L 80,70 L 120,70" />
       <path class="route-phantom" fill="none" d="M 20,-20 L 20,50 L 90,50 L 90,120" />
-      <!-- Ruta Principal Animada -->
       <path id="routePath" class="route-path" fill="none" d="M 10,-50 C 40,0 95,35 60,50 C 25,65 80,100 50,150" />
     </svg>
   </div>
@@ -39,6 +37,7 @@
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#sobre-mi">Sobre mí</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#publicaciones">Publicaciones</a></li>
       <li><a href="#portafolio">Portafolio</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
@@ -54,6 +53,7 @@
       <li><a href="#inicio" onclick="closeMobile()">Inicio</a></li>
       <li><a href="#sobre-mi" onclick="closeMobile()">Sobre mí</a></li>
       <li><a href="#skills" onclick="closeMobile()">Skills</a></li>
+      <li><a href="#publicaciones" onclick="closeMobile()">Publicaciones</a></li>
       <li><a href="#portafolio" onclick="closeMobile()">Portafolio</a></li>
       <li><a href="#contacto" onclick="closeMobile()">Contacto</a></li>
     </ul>
@@ -71,7 +71,16 @@
           <a href="#contacto" class="btn-ghost">Contacto</a>
           <a href="CV.pdf" target="_blank" class="btn-ghost" download>📄 Descargar CV</a>
         </div>
-
+        <!-- PUBLICACIONES CTA -->
+        <a href="#publicaciones" class="pub-cta">
+          <div class="pub-cta-icon">◎</div>
+          <div class="pub-cta-text">
+            <span class="pub-cta-label mono">Publicaciones recientes</span>
+            <span class="pub-cta-title">Geoportales como herramienta para la toma de decisiones en el espacio
+              público</span>
+          </div>
+          <div class="pub-cta-arrow">→</div>
+        </a>
       </div>
       <div class="hero-visual">
         <div class="photo-frame">
@@ -96,11 +105,11 @@
       <div class="about-grid">
         <div class="about-text">
           <h2 class="section-title">Territorio<br /><em>+ Código</em></h2>
-          <p>Urbanista con especialidad en geointeligencia y planificación territorial, con visión estratégica para
-            fortalecer los procesos de ordenamiento, planeación y gobernanza territorial mediante el uso de información
-            espacial y soluciones tecnológicas orientadas a la toma de decisiones.</p>
-          <p>Actualmente colaboro como Analista SIG en Encaje Taller Urbano e Investigador-Cartógrafo en el Instituto de
-            Investigaciones Económicas de la UNAM, donde contribuyo a un atlas nacional de la industria automotriz.</p>
+          <p>Urbanista especializado en geointeligencia y planificación territorial, con enfoque estratégico en el
+            fortalecimiento de procesos de ordenamiento, planeación y gobernanza del territorio. Integro análisis
+            espacial, programación y soluciones tecnológicas para apoyar la toma de decisiones.</p>
+          <p>Actualmente me desempeño como Analista SIG en Encaje Taller Urbano y como investigador enfocado en
+            soluciones geoespaciales en el Instituto de Investigaciones Económicas de la UNAM.</p>
           <div class="cert-chips">
             <span class="chip">INEGI · Mapeo</span>
             <span class="chip">SEDATU · Estudios Metropolitanos</span>
@@ -154,7 +163,6 @@
       <h2 class="section-title">Stack<br /><em>Técnico</em></h2>
 
       <div class="skills-layout">
-        <!-- Radar Chart -->
         <div class="radar-wrap">
           <canvas id="radarChart" width="380" height="380" style="width:380px;height:380px;display:block;"></canvas>
           <div class="radar-legend">
@@ -162,90 +170,69 @@
           </div>
         </div>
 
-        <!-- Skill Groups -->
         <div class="skill-groups">
           <div class="skill-group">
             <div class="group-label mono">GIS & Territorio</div>
             <div class="skill-bars">
-              <div class="skill-bar-item">
-                <span>QGIS</span>
+              <div class="skill-bar-item"><span>QGIS</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:95%"></div>
-                </div>
-                <span class="mono level">95</span>
+                </div><span class="mono level">95</span>
               </div>
-              <div class="skill-bar-item">
-                <span>ArcGIS</span>
+              <div class="skill-bar-item"><span>ArcGIS</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:75%"></div>
-                </div>
-                <span class="mono level">75</span>
+                </div><span class="mono level">75</span>
               </div>
-              <div class="skill-bar-item">
-                <span>GeoDa</span>
+              <div class="skill-bar-item"><span>GeoDa</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:70%"></div>
-                </div>
-                <span class="mono level">70</span>
+                </div><span class="mono level">70</span>
               </div>
-              <div class="skill-bar-item">
-                <span>Agisoft Metashape</span>
+              <div class="skill-bar-item"><span>Agisoft Metashape</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:90%"></div>
-                </div>
-                <span class="mono level">90</span>
+                </div><span class="mono level">90</span>
               </div>
             </div>
           </div>
           <div class="skill-group">
             <div class="group-label mono">Desarrollo Web</div>
             <div class="skill-bars">
-              <div class="skill-bar-item">
-                <span>HTML5</span>
+              <div class="skill-bar-item"><span>HTML5</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:90%"></div>
-                </div>
-                <span class="mono level">90</span>
+                </div><span class="mono level">90</span>
               </div>
-              <div class="skill-bar-item">
-                <span>CSS3</span>
+              <div class="skill-bar-item"><span>CSS3</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:92%"></div>
-                </div>
-                <span class="mono level">92</span>
+                </div><span class="mono level">92</span>
               </div>
-              <div class="skill-bar-item">
-                <span>JavaScript</span>
+              <div class="skill-bar-item"><span>JavaScript</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:85%"></div>
-                </div>
-                <span class="mono level">85</span>
+                </div><span class="mono level">85</span>
               </div>
             </div>
           </div>
           <div class="skill-group">
             <div class="group-label mono">Diseño & 3D</div>
             <div class="skill-bars">
-              <div class="skill-bar-item">
-                <span>ProCreate</span>
+              <div class="skill-bar-item"><span>ProCreate</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:90%"></div>
-                </div>
-                <span class="mono level">90</span>
+                </div><span class="mono level">90</span>
               </div>
-              <div class="skill-bar-item">
-                <span>Composite Editor</span>
+              <div class="skill-bar-item"><span>Composite Editor</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:88%"></div>
-                </div>
-                <span class="mono level">88</span>
+                </div><span class="mono level">88</span>
               </div>
-              <div class="skill-bar-item">
-                <span>Word / Excel</span>
+              <div class="skill-bar-item"><span>Word / Excel</span>
                 <div class="bar">
                   <div class="bar-fill" style="--w:95%"></div>
-                </div>
-                <span class="mono level">95</span>
+                </div><span class="mono level">95</span>
               </div>
             </div>
           </div>
@@ -254,10 +241,70 @@
     </div>
   </section>
 
+  <!-- ══════════════════════════════════════════
+       PUBLICACIONES
+  ══════════════════════════════════════════ -->
+  <section class="section pub-section" id="publicaciones">
+    <div class="container">
+      <div class="section-label mono">// 03 — Investigación & Difusión</div>
+      <h2 class="section-title">Publicaciones<br /><em>& Artículos</em></h2>
+      <p class="pub-intro">Reflexiones y análisis sobre geointeligencia, planificación territorial y el uso de datos
+        espaciales para la toma de decisiones en el espacio público.</p>
+
+      <div class="pub-grid">
+
+        <!-- ARTÍCULO 01 -->
+        <a class="pub-card"
+          href="https://anpr.org.mx/analisis-territorial-inteligente-geoportales-como-herramienta-para-la-toma-de-decisiones-en-la-gestion-del-espacio-publico/"
+          target="_blank" rel="noopener">
+          <div class="pub-card-header">
+            <div class="pub-meta">
+              <span class="pub-tag">Geointeligencia</span>
+              <span class="pub-tag">Espacio Público</span>
+              <span class="pub-tag">ANPR</span>
+            </div>
+            <div class="pub-year mono">2026</div>
+          </div>
+          <div class="pub-card-body">
+            <div class="pub-source mono">ANPR · Asociación Nacional de Parques y Recreación</div>
+            <h3 class="pub-title">Análisis Territorial Inteligente: Geoportales como herramienta para la toma de
+              decisiones en la gestión del espacio público</h3>
+            <p class="pub-abstract">Exploración del uso de geoportales interactivos como instrumentos de geointeligencia
+              aplicada al diagnóstico, planificación y gestión estratégica del espacio público en contextos urbanos
+              mexicanos.</p>
+          </div>
+          <div class="pub-card-footer">
+            <span class="pub-read mono">Leer artículo →</span>
+            <div class="pub-dot-accent"></div>
+          </div>
+        </a>
+
+        <!-- PLACEHOLDER — próximas publicaciones -->
+        <div class="pub-card pub-card--coming">
+          <div class="pub-card-header">
+            <div class="pub-meta">
+              <span class="pub-tag pub-tag--ghost">En proceso</span>
+            </div>
+          </div>
+          <div class="pub-card-body">
+            <div class="pub-source mono">Próxima publicación</div>
+            <h3 class="pub-title pub-title--ghost">Tu próximo artículo aparecerá aquí</h3>
+            <p class="pub-abstract">Agrega nuevas publicaciones editando el archivo <code>index.html</code> en la
+              sección <code>#publicaciones</code>.</p>
+          </div>
+          <div class="pub-card-footer">
+            <span class="pub-read mono" style="opacity:0.3">Próximamente</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- PORTAFOLIO -->
   <section class="section portfolio-section" id="portafolio">
     <div class="container">
-      <div class="section-label mono">// 03 — Portafolio</div>
+      <div class="section-label mono">// 04 — Portafolio</div>
       <h2 class="section-title">Proyectos<br /><em>Destacados</em></h2>
 
       <div class="projects-grid">
@@ -274,9 +321,7 @@
           </div>
           <div class="project-info">
             <div class="project-tags">
-              <span class="tag">SIG</span>
-              <span class="tag">Espacios Públicos</span>
-              <span class="tag">Mérida</span>
+              <span class="tag">SIG</span><span class="tag">Espacios Públicos</span><span class="tag">Mérida</span>
             </div>
             <h3>GeoEspacio — Mérida</h3>
             <p>Diagnóstico y análisis territorial de espacios públicos en Mérida, Yucatán. Cartografía interactiva con
@@ -298,9 +343,7 @@
           </div>
           <div class="project-info">
             <div class="project-tags">
-              <span class="tag">Normativa</span>
-              <span class="tag">Campeche</span>
-              <span class="tag">Ordenamiento</span>
+              <span class="tag">Normativa</span><span class="tag">Campeche</span><span class="tag">Ordenamiento</span>
             </div>
             <h3>Normativa Champotón — Campeche</h3>
             <p>Integración de normativa territorial y análisis de uso de suelo para el municipio de Champotón, Campeche.
@@ -322,9 +365,7 @@
           </div>
           <div class="project-info">
             <div class="project-tags">
-              <span class="tag">Atlas</span>
-              <span class="tag">Automotriz</span>
-              <span class="tag">UNAM</span>
+              <span class="tag">Atlas</span><span class="tag">Automotriz</span><span class="tag">UNAM</span>
             </div>
             <h3>Atlas Armadoras Automotrices — UNAM</h3>
             <p>Mapeo de unidades económicas de la industria automotriz en México. Proyecto DGAPA-PAPIIT, Instituto de
@@ -345,9 +386,7 @@
           </div>
           <div class="project-info">
             <div class="project-tags">
-              <span class="tag">Cartografía</span>
-              <span class="tag">Análisis</span>
-              <span class="tag">Territorial</span>
+              <span class="tag">Cartografía</span><span class="tag">Análisis</span><span class="tag">Territorial</span>
             </div>
             <h3>Proyecto Chenk</h3>
             <p>Análisis territorial y representación cartográfica interactiva. Desarrollo de geovisualizador con datos
@@ -368,9 +407,7 @@
           </div>
           <div class="project-info">
             <div class="project-tags">
-              <span class="tag">Logística</span>
-              <span class="tag">Optimización</span>
-              <span class="tag">Rutas</span>
+              <span class="tag">Logística</span><span class="tag">Optimización</span><span class="tag">Rutas</span>
             </div>
             <h3>Sistema Logístico</h3>
             <p>Plataforma de optimización logística y análisis de rutas espaciales. Dashboard interactivo con
@@ -387,7 +424,7 @@
   <!-- CONTACTO -->
   <section class="section contact-section" id="contacto">
     <div class="container">
-      <div class="section-label mono">// 04 — Contacto</div>
+      <div class="section-label mono">// 05 — Contacto</div>
       <h2 class="section-title">Hablemos<br /><em>de tu proyecto</em></h2>
       <p class="contact-sub">Disponible para proyectos de análisis territorial, cartografía, diseño urbano y desarrollo
         de geovisualizadores.</p>
